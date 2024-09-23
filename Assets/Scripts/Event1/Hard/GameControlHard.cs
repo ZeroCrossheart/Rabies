@@ -25,8 +25,8 @@ public class GameControlHard : MonoBehaviour
     {
         int originalLenght = faceIndexes.Count; 
 
-        float yPosition = 3f;
-        float xPosition = -5.29f;
+        float yPosition = 2.7f;
+        float xPosition = -4f;
 
         for (int i = 0; i < 11; i++)
         {
@@ -35,16 +35,16 @@ public class GameControlHard : MonoBehaviour
             var temp = Instantiate(card, new Vector3(xPosition, yPosition, 0), Quaternion.identity);
             temp.GetComponent<MainCardHard>().faceIndex = faceIndexes[shuffleNum];
             faceIndexes.Remove(faceIndexes[shuffleNum]);
-            xPosition = xPosition + 2;
+            xPosition = xPosition + 2.5f;
             if ( i == 2)
             {
-                yPosition = 1f;
-                xPosition = -7.29f;
+                yPosition = -0.35f;
+                xPosition = -6.5f;
             }
             else if ( i == 6) 
             {
-                yPosition = -1f;
-                xPosition = -7.29f;
+                yPosition = -3.4f;
+                xPosition = -6.5f;
             }
         }
         card.GetComponent<MainCardHard>().faceIndex = faceIndexes[0];
