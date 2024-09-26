@@ -15,7 +15,10 @@ public class MainCardEasy : MonoBehaviour
     public int faceIndex;
     public bool matched = false;
 
-    
+    public void Start()
+    {
+        Invoke("TurnCardsOverWithDelay", 0.1f);
+    }
 
     public void OnMouseDown()
     {
@@ -71,5 +74,22 @@ public class MainCardEasy : MonoBehaviour
     public void TurnCardsBackWithDelay()
     {
         Invoke("TurnCardsBack", 1f);
+    }
+
+    public void TurnCardsBackWithMoreDelay()
+    {
+        Invoke("TurnCardsBack", 3f);
+    }
+
+    public void TurnCardOver()
+    {
+        spriteRenderer.sprite = faces[faceIndex];
+        gameControl.GetComponent<GameControlEasy>().AddVisibleFace(faceIndex);
+    }
+
+    public void TurnCardsOverWithDelay()
+    {
+        TurnCardOver();
+        TurnCardsBackWithMoreDelay();
     }
 }
