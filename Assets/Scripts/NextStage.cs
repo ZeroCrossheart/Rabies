@@ -11,5 +11,11 @@ public class NextStage : MonoBehaviour
     public void LoadNextScene()
     {
         SceneManager.LoadScene(nextScene);
+        Time.timeScale = 1.0f;
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

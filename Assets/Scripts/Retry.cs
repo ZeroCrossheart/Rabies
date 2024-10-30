@@ -15,5 +15,9 @@ public class Retry : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(currentSceneName);
+        if(Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
     }
 }

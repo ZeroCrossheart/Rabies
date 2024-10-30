@@ -14,6 +14,8 @@ public class Score : MonoBehaviour
 
     [SerializeField] private GameObject win;
 
+    [SerializeField] private SFXPlayer soundPlayer;
+
     void Awake()
     {
         win.SetActive(false);
@@ -25,6 +27,7 @@ public class Score : MonoBehaviour
         /*scoreText.text = "Score : " + currentScore;*/
         if (currentScore == winScore)
         {
+            /*soundPlayer.AllCorrectEffect();*/
             win.SetActive(true);
         }
     }

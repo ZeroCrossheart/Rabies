@@ -36,8 +36,8 @@ public class NewE2GameController : MonoBehaviour
     private void Update()
     {
         CheckItem();
-        Debug.Log(clickedItem);
-        Debug.Log(score);
+        /*Debug.Log(clickedItem);
+        Debug.Log(score);*/
     }
 
     /*IEnumerator SpawnItem()

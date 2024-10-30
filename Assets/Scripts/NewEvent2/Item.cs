@@ -28,6 +28,8 @@ public class Item : MonoBehaviour
 
     void Start()
     {
+        right.SetActive(false);
+        wrong.SetActive(false);
         controller = GameObject.Find("GameController");
         canvas = GameObject.Find("Canvas");
         win = canvas.transform.Find("Win").gameObject;

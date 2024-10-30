@@ -14,6 +14,8 @@ public class GameControlHard : MonoBehaviour
     [SerializeField] private Timer timer;
     [SerializeField] private MarkTextInGreen MarkTextInGreen;
 
+    [SerializeField] private SFXPlayer soundPlayer;
+
     List<int> faceIndexes = new List<int> { 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5};
     public List<GameObject> selectedCards = new List<GameObject>();
     public static System.Random rnd = new System.Random();
@@ -25,7 +27,7 @@ public class GameControlHard : MonoBehaviour
     {
         int originalLenght = faceIndexes.Count; 
 
-        float yPosition = 2.7f;
+        float yPosition = 2.4f;
         float xPosition = -4f;
 
         for (int i = 0; i < 11; i++)
@@ -38,12 +40,12 @@ public class GameControlHard : MonoBehaviour
             xPosition = xPosition + 2.5f;
             if ( i == 2)
             {
-                yPosition = -0.35f;
+                yPosition = -0.62f;
                 xPosition = -6.5f;
             }
             else if ( i == 6) 
             {
-                yPosition = -3.4f;
+                yPosition = -3.64f;
                 xPosition = -6.5f;
             }
         }
@@ -104,6 +106,7 @@ public class GameControlHard : MonoBehaviour
         bool success = false;
         if (visibleFaces[0] == visibleFaces[1])
         {
+            soundPlayer.CorrectMatchEffect();
             visibleFaces[0] = -1;
             visibleFaces[1] = -2;
             success = true;
@@ -161,6 +164,7 @@ public class GameControlHard : MonoBehaviour
         }
         else if (visibleFaces[0] != visibleFaces[1] && selectedCards.Count == 2 && success == false)
         {
+            soundPlayer.WrongMatchEffect();
             card1 = selectedCards[0];
             card2 = selectedCards[1];
             card1.GetComponent<MainCardHard>().TurnCardsBackWithDelay();

@@ -6,11 +6,14 @@ public class MainCardEasy : MonoBehaviour
 {
     GameObject gameControl;
     [SerializeField] private GameObject retry;
+    [SerializeField] private GameObject pauseScene;
 
     SpriteRenderer spriteRenderer;
 
     [SerializeField] private Sprite[] faces;
     [SerializeField] private Sprite back;
+
+    [SerializeField] private SFXPlayer soundPlayer;
 
     public int faceIndex;
     public bool matched = false;
@@ -22,7 +25,8 @@ public class MainCardEasy : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (retry.activeInHierarchy == false)
+        soundPlayer.CardClickEffect();
+        if (retry.activeInHierarchy == false && pauseScene.activeInHierarchy == false)
         {
             if (matched == false)
             {

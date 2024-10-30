@@ -25,6 +25,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+
         if (timeLeft >= 0.0f && win.activeInHierarchy == false)
         {
             timeLeft -= Time.deltaTime;
@@ -39,7 +40,7 @@ public class Timer : MonoBehaviour
             TimeUp();
             timeLeft = 0.0f;
         }
-        /*timerText.text = "Time Left : " + ((int)time);*/
+        timerText.text = "" + ((int)timeLeft);
     }
 
     private void TimeUp()
