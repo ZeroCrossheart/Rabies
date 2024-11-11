@@ -73,9 +73,13 @@ public class Item : MonoBehaviour
         }
         else if (GetComponent<SpriteRenderer>().sprite == itemSprites[2])
         {
-            gameController.ChangeClickedItem(ClickedItem.towel);
+            gameController.ChangeClickedItem(ClickedItem.gauze);
         }
         else if (GetComponent<SpriteRenderer>().sprite == itemSprites[3])
+        {
+            gameController.ChangeClickedItem(ClickedItem.towel);
+        }
+        else if (GetComponent<SpriteRenderer>().sprite == itemSprites[4])
         {
             gameController.ChangeClickedItem(ClickedItem.betadine);
         }
@@ -87,7 +91,7 @@ public class Item : MonoBehaviour
 
     private void ChangeHighlight()
     {
-        if (gameController.score == 0 || gameController.score == 2)
+        if (gameController.score == 0)
         {
             if (GetComponent<SpriteRenderer>().sprite == itemSprites[0])
             {
@@ -113,7 +117,7 @@ public class Item : MonoBehaviour
                 Destroy(this.gameObject, timeToDestroy);
             }
         }
-        if (gameController.score == 3)
+        else if (gameController.score == 2)
         {
             if (GetComponent<SpriteRenderer>().sprite == itemSprites[2])
             {
@@ -126,9 +130,22 @@ public class Item : MonoBehaviour
                 Destroy(this.gameObject, timeToDestroy);
             }
         }
-        if (gameController.score == 4)
+        if (gameController.score == 3)
         {
             if (GetComponent<SpriteRenderer>().sprite == itemSprites[3])
+            {
+                right.SetActive(true);
+                Destroy(this.gameObject, timeToDestroy);
+            }
+            else
+            {
+                wrong.SetActive(true);
+                Destroy(this.gameObject, timeToDestroy);
+            }
+        }
+        if (gameController.score == 4)
+        {
+            if (GetComponent<SpriteRenderer>().sprite == itemSprites[4])
             {
                 right.SetActive(true);
                 Destroy(this.gameObject, timeToDestroy);

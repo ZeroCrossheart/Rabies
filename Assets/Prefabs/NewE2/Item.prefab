@@ -104,6 +104,7 @@ MonoBehaviour:
   itemSprites:
   - {fileID: 1204012468, guid: e50c51d9154e29343a6ee8f5cff32149, type: 3}
   - {fileID: 812081012, guid: e50c51d9154e29343a6ee8f5cff32149, type: 3}
+  - {fileID: -1190415870, guid: 51942f10c40649549a1c9b4ff88e0785, type: 3}
   - {fileID: -555684998, guid: e50c51d9154e29343a6ee8f5cff32149, type: 3}
   - {fileID: 2121701240, guid: e50c51d9154e29343a6ee8f5cff32149, type: 3}
   - {fileID: 2057727732, guid: e50c51d9154e29343a6ee8f5cff32149, type: 3}

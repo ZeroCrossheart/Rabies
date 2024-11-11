@@ -13,11 +13,6 @@ public class NewE2GameController : MonoBehaviour
     [Header("")]
     [SerializeField] private TMP_Text[] instructionList;
 
-    /*[Header("")]
-    [SerializeField] private GameObject item;
-    [SerializeField] private GameObject spawner;
-    [SerializeField] private float spawnWaitTime = 2f;*/
-
     [Header("")]
     [SerializeField] private Timer timer;
 
@@ -27,8 +22,6 @@ public class NewE2GameController : MonoBehaviour
 
     void Start()
     {
-        win.SetActive(false);
-        retry.SetActive(false);
         score = 0;
         clickedItem = ClickedItem.none;
         /*StartCoroutine(SpawnItem());*/
@@ -40,15 +33,6 @@ public class NewE2GameController : MonoBehaviour
         Debug.Log(score);*/
     }
 
-    /*IEnumerator SpawnItem()
-    {
-        while (retry.activeInHierarchy == false && win.activeInHierarchy == false)
-        {
-            yield return new WaitForSeconds(spawnWaitTime);
-            Instantiate(item, spawner.transform.position, Quaternion.identity);
-        }
-    }*/
-
     public ClickedItem ChangeClickedItem(ClickedItem clickedSprite)
     {
         clickedItem = clickedSprite;
@@ -57,7 +41,7 @@ public class NewE2GameController : MonoBehaviour
 
     private void CheckItem()
     {
-        if (score == 0 || score == 2)
+        if (score == 0)
         {
             if (clickedItem == ClickedItem.water)
             {
@@ -84,6 +68,24 @@ public class NewE2GameController : MonoBehaviour
                 score += 1;
                 clickedItem = ClickedItem.none;
                 instructionList[1].color = Color.green;
+            }
+            else if (clickedItem != ClickedItem.none)
+            {
+                timer.DecreaseTime();
+                clickedItem = ClickedItem.none;
+            }
+            else if (clickedItem != ClickedItem.none)
+            {
+                return;
+            }
+        }
+        else if (score == 2)
+        {
+            if (clickedItem == ClickedItem.gauze)
+            {
+                score += 1;
+                clickedItem = ClickedItem.none;
+                instructionList[2].color = Color.green;
             }
             else if (clickedItem != ClickedItem.none)
             {
@@ -143,6 +145,7 @@ public enum ClickedItem
     none,
     water,
     soap,
+    gauze,
     towel,
     betadine,
     other,
