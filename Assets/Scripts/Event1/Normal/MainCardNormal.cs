@@ -7,6 +7,7 @@ public class MainCardNormal : MonoBehaviour
     GameObject gameControl;
     [SerializeField] private GameObject retry;
     [SerializeField] private GameObject pauseScene;
+    [SerializeField] private GameObject settingScene;
 
     SpriteRenderer spriteRenderer;
 
@@ -26,7 +27,7 @@ public class MainCardNormal : MonoBehaviour
     public void OnMouseDown()
     {
         soundPlayer.CardClickEffect();
-        if (retry.activeInHierarchy == false && pauseScene.activeInHierarchy == false)
+        if (retry.activeInHierarchy == false && pauseScene.activeInHierarchy == false && settingScene.activeInHierarchy == false)
         {
             if (matched == false)
             {

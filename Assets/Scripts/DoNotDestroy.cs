@@ -13,7 +13,7 @@ public class DoNotDestroy : MonoBehaviour
 
         if (go.Count() > 1)
         {
-            Destroy(this.gameObject);
+            Destroy(go[0]);
         }
 
         DontDestroyOnLoad(this.gameObject);

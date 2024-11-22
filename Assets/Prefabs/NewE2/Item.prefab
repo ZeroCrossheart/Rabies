@@ -103,8 +103,8 @@ MonoBehaviour:
   controller: {fileID: 0}
   itemSprites:
   - {fileID: 1204012468, guid: e50c51d9154e29343a6ee8f5cff32149, type: 3}
-  - {fileID: 812081012, guid: e50c51d9154e29343a6ee8f5cff32149, type: 3}
-  - {fileID: -1190415870, guid: 51942f10c40649549a1c9b4ff88e0785, type: 3}
+  - {fileID: 845630375, guid: 8aa92d3d08ce67348b38cc0e91a823e3, type: 3}
+  - {fileID: 478194647, guid: 1abdd188d1887034197d0501a5117186, type: 3}
   - {fileID: -555684998, guid: e50c51d9154e29343a6ee8f5cff32149, type: 3}
   - {fileID: 2121701240, guid: e50c51d9154e29343a6ee8f5cff32149, type: 3}
   - {fileID: 2057727732, guid: e50c51d9154e29343a6ee8f5cff32149, type: 3}
