@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SFXPlayer : MonoBehaviour
+public class E1SFXPlayer : MonoBehaviour
 {
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip[] sfxClips;
@@ -25,9 +25,9 @@ public class SFXPlayer : MonoBehaviour
         source.Play();
     }
 
-    public void AllCorrectEffect()
+    /*public void AllCorrectEffect()
     {
         source.clip = sfxClips[3];
         source.Play();
-    }
+    }*/
 }

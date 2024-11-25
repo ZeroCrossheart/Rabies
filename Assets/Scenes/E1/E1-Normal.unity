@@ -253,15 +253,15 @@ RectTransform:
   m_GameObject: {fileID: 82847226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 1.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1029917913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2041016, y: -8.42923}
-  m_SizeDelta: {x: 350.4664, y: 237.2749}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 260, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82847228
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f6c5f7bc7b0c4464c9b8e8305e24dd1c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -673,6 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SFXSlider: {fileID: 1204501620}
+  SFX: {fileID: 0}
 --- !u!1 &220354127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BGMSlider: {fileID: 1204501621}
+  BGM: {fileID: 450292512}
 --- !u!1 &501827281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,15 +1308,15 @@ RectTransform:
   m_GameObject: {fileID: 527777428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 1.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 843261663}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.6333618, y: -0.4436798}
-  m_SizeDelta: {x: 263.7664, y: 240.8873}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 260, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527777430
 MonoBehaviour:
@@ -1336,7 +1338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f6c5f7bc7b0c4464c9b8e8305e24dd1c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1589,7 +1591,6 @@ MonoBehaviour:
   winScore: 400
   scoreText: {fileID: 0}
   win: {fileID: 1029917912}
-  soundPlayer: {fileID: 426709929}
 --- !u!114 &718839526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,8 +1883,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 1039599514, guid: e0cee937d4a5a524c837f062ec1643b8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2542,6 +2543,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3074716727308489393, guid: 77c3c6f24b3ced643b75047e0e74db53, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9156a17275ea98f458cb66bda93be62a, type: 3}
+    - target: {fileID: 3074716727308489393, guid: 77c3c6f24b3ced643b75047e0e74db53, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 118357037}
+    - target: {fileID: 3074716727308489393, guid: 77c3c6f24b3ced643b75047e0e74db53, type: 3}
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 2040313589}
@@ -2798,7 +2807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -145}
+  m_AnchoredPosition: {x: 0, y: -137}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297623601
@@ -2890,8 +2899,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 1039599514, guid: e0cee937d4a5a524c837f062ec1643b8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3158,8 +3167,8 @@ RectTransform:
   - {fileID: 220354128}
   - {fileID: 2040313588}
   - {fileID: 1204501619}
-  - {fileID: 1029917913}
   - {fileID: 843261663}
+  - {fileID: 1029917913}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3450,6 +3459,8 @@ MonoBehaviour:
   win: {fileID: 1029917912}
   retry: {fileID: 843261662}
   settingScreen: {fileID: 1204501622}
+  source: {fileID: 118357037}
+  clip: {fileID: 8300000, guid: 9156a17275ea98f458cb66bda93be62a, type: 3}
 --- !u!1 &1714430874
 GameObject:
   m_ObjectHideFlags: 0
@@ -4209,6 +4220,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1455083100}
     m_Modifications:
+    - target: {fileID: 175196043817148327, guid: fa2dde847d0634341a95972b099614df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1595646956}
+    - target: {fileID: 175196043817148327, guid: fa2dde847d0634341a95972b099614df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSetting
+      objectReference: {fileID: 0}
     - target: {fileID: 6687698857997293268, guid: fa2dde847d0634341a95972b099614df, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4309,6 +4328,14 @@ PrefabInstance:
       propertyPath: settingScreen
       value: 
       objectReference: {fileID: 1204501622}
+    - target: {fileID: 7762856295284219604, guid: fa2dde847d0634341a95972b099614df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1595646956}
+    - target: {fileID: 7762856295284219604, guid: fa2dde847d0634341a95972b099614df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

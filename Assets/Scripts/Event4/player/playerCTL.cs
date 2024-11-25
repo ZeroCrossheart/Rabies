@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class playerCTL : MonoBehaviour
 {
+    [SerializeField] private E4SFX sound;
+
     [SerializeField] private MovementJoystick joystick;
     [SerializeField] private float speed = 3f;
     private Rigidbody2D rb;
@@ -34,6 +36,7 @@ public class playerCTL : MonoBehaviour
         GameObject other = collision.gameObject;
         if (other.gameObject.tag == "Normal")
         {
+            sound.CureEffect();
             other.GetComponent<SpriteRenderer>().sprite = curedSprite;
             other.gameObject.tag = "DogCured";
         }

@@ -14,7 +14,7 @@ public class GameControlHard : MonoBehaviour
     [SerializeField] private Timer timer;
     [SerializeField] private MarkTextInGreen MarkTextInGreen;
 
-    [SerializeField] private SFXPlayer soundPlayer;
+    [SerializeField] private E1SFXPlayer soundPlayer;
 
     List<int> faceIndexes = new List<int> { 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5};
     public List<GameObject> selectedCards = new List<GameObject>();

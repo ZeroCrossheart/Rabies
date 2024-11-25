@@ -8,6 +8,8 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private E4SFX sound;
+
     [SerializeField] private List<GameObject> targetDog = new List<GameObject>();
     [SerializeField] private List<GameObject> dogInfected = new List<GameObject>();
     [SerializeField] private Sprite infectedSprite;
@@ -61,6 +63,7 @@ public class Enemy : MonoBehaviour
         {
             /*Debug.Log("Hit");
             Debug.Log(other.gameObject.name);*/
+            sound.BiteEffect();
             other.GetComponent<SpriteRenderer>().sprite = infectedSprite;
             targetDog.Remove(other);
             other.gameObject.tag = "DogInfected";

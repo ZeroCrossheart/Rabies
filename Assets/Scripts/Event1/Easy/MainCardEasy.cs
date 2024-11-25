@@ -14,7 +14,7 @@ public class MainCardEasy : MonoBehaviour
     [SerializeField] private Sprite[] faces;
     [SerializeField] private Sprite back;
 
-    [SerializeField] private SFXPlayer soundPlayer;
+    [SerializeField] private E1SFXPlayer soundPlayer;
 
     public int faceIndex;
     public bool matched = false;
@@ -26,9 +26,10 @@ public class MainCardEasy : MonoBehaviour
 
     public void OnMouseDown()
     {
-        soundPlayer.CardClickEffect();
+        
         if (retry.activeInHierarchy == false && pauseScene.activeInHierarchy == false && settingScene.activeInHierarchy == false)
         {
+            soundPlayer.CardClickEffect();
             if (matched == false)
             {
                 if (spriteRenderer.sprite == back)

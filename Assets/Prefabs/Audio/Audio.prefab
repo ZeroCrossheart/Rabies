@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5239904394502260134}
-  - component: {fileID: 8386454862526041526}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -34,24 +33,6 @@ Transform:
   - {fileID: 5783987493960883650}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8386454862526041526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794384700058929835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2beb32cac1d727644bfdb96fc02e17a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source: {fileID: 6266466645033916695}
-  sfxClips:
-  - {fileID: 8300000, guid: 566c43773b1b40944a8602fb26fffef0, type: 3}
-  - {fileID: 8300000, guid: 60dbbe3151665364d8ebb3ef8368f20d, type: 3}
-  - {fileID: 8300000, guid: 16e3093747790864cbfc4368c62030f4, type: 3}
-  - {fileID: 8300000, guid: 9156a17275ea98f458cb66bda93be62a, type: 3}
 --- !u!1 &5620595327593408472
 GameObject:
   m_ObjectHideFlags: 0

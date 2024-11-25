@@ -9,10 +9,20 @@ public class Pause : MonoBehaviour
     [SerializeField] private GameObject retry;
     [SerializeField] private GameObject settingScreen;
 
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clip;
+
+    private void Awake()
+    {
+        source.clip = clip;
+    }
+
     public void PauseScene()
     {
+        source.Play();
         if (/*win.activeInHierarchy == false && */retry.activeInHierarchy == false && pauseScreen.activeInHierarchy == false && settingScreen.activeInHierarchy == false)
         {
+            source.Play();
             Time.timeScale = 0f;
             pauseScreen.SetActive(true);
         };
@@ -20,12 +30,14 @@ public class Pause : MonoBehaviour
 
     public void OpenSetting()
     {
+        source.Play();
         settingScreen.SetActive(true);
-        this.gameObject.SetActive(false);
+        pauseScreen.gameObject.SetActive(false);
     }
 
     public void ResumeScene()
     {
+        source.Play();
         Time.timeScale = 1f;
         pauseScreen.SetActive(false);
     }

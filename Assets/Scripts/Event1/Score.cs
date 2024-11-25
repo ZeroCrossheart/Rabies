@@ -14,7 +14,7 @@ public class Score : MonoBehaviour
 
     [SerializeField] private GameObject win;
 
-    [SerializeField] private SFXPlayer soundPlayer;
+    /*[SerializeField] private E1SFXPlayer soundPlayer;*/
 
     void Awake()
     {

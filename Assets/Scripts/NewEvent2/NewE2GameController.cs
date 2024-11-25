@@ -16,6 +16,8 @@ public class NewE2GameController : MonoBehaviour
     [Header("")]
     [SerializeField] private Timer timer;
 
+    [SerializeField] private E2SFX sound;
+
     public int score;
 
     private ClickedItem clickedItem;
@@ -45,6 +47,7 @@ public class NewE2GameController : MonoBehaviour
         {
             if (clickedItem == ClickedItem.water)
             {
+                sound.CorrectMatchEffect();
                 instructionList[score].color = Color.green;
                 score += 1;
                 clickedItem = ClickedItem.none;
@@ -52,6 +55,7 @@ public class NewE2GameController : MonoBehaviour
             }
             else if (clickedItem != ClickedItem.none)
             {
+                sound.WrongMatchEffect();
                 timer.DecreaseTime();
                 clickedItem = ClickedItem.none;
                 /*instructionList[0].color = Color.red;*/
@@ -65,12 +69,14 @@ public class NewE2GameController : MonoBehaviour
         {
             if (clickedItem == ClickedItem.soap)
             {
+                sound.CorrectMatchEffect();
                 score += 1;
                 clickedItem = ClickedItem.none;
                 instructionList[1].color = Color.green;
             }
             else if (clickedItem != ClickedItem.none)
             {
+                sound.WrongMatchEffect();
                 timer.DecreaseTime();
                 clickedItem = ClickedItem.none;
             }
@@ -83,12 +89,14 @@ public class NewE2GameController : MonoBehaviour
         {
             if (clickedItem == ClickedItem.gauze)
             {
+                sound.CorrectMatchEffect();
                 score += 1;
                 clickedItem = ClickedItem.none;
                 instructionList[2].color = Color.green;
             }
             else if (clickedItem != ClickedItem.none)
             {
+                sound.WrongMatchEffect();
                 timer.DecreaseTime();
                 clickedItem = ClickedItem.none;
             }
@@ -101,12 +109,14 @@ public class NewE2GameController : MonoBehaviour
         {
             if (clickedItem == ClickedItem.towel)
             {
+                sound.CorrectMatchEffect();
                 score += 1;
                 clickedItem = ClickedItem.none;
                 instructionList[3].color = Color.green;
             }
             else if (clickedItem != ClickedItem.none)
             {
+                sound.WrongMatchEffect();
                 timer.DecreaseTime();
                 clickedItem = ClickedItem.none;
             }
@@ -119,12 +129,14 @@ public class NewE2GameController : MonoBehaviour
         {
             if (clickedItem == ClickedItem.betadine)
             {
+                sound.CorrectMatchEffect();
                 score += 1;
                 clickedItem = ClickedItem.none;
                 instructionList[4].color = Color.green;
             }
             else if (clickedItem != ClickedItem.none)
             {
+                sound.WrongMatchEffect();
                 timer.DecreaseTime();
                 clickedItem = ClickedItem.none;
             }
