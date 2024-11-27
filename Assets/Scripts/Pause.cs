@@ -8,20 +8,18 @@ public class Pause : MonoBehaviour
     [SerializeField] private GameObject win;
     [SerializeField] private GameObject retry;
     [SerializeField] private GameObject settingScreen;
+    [SerializeField] private GameObject tutorialOverlay;
 
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip clip;
 
-    private void Awake()
-    {
-        source.clip = clip;
-    }
-
     public void PauseScene()
     {
-        source.Play();
-        if (/*win.activeInHierarchy == false && */retry.activeInHierarchy == false && pauseScreen.activeInHierarchy == false && settingScreen.activeInHierarchy == false)
+        /*source.clip = clip;
+        source.Play();*/
+        if (/*win.activeInHierarchy == false && */retry.activeInHierarchy == false && pauseScreen.activeInHierarchy == false && settingScreen.activeInHierarchy == false && tutorialOverlay.activeInHierarchy == false)
         {
+            source.clip = clip;
             source.Play();
             Time.timeScale = 0f;
             pauseScreen.SetActive(true);
@@ -30,6 +28,7 @@ public class Pause : MonoBehaviour
 
     public void OpenSetting()
     {
+        source.clip = clip;
         source.Play();
         settingScreen.SetActive(true);
         pauseScreen.gameObject.SetActive(false);
@@ -37,6 +36,7 @@ public class Pause : MonoBehaviour
 
     public void ResumeScene()
     {
+        source.clip = clip;
         source.Play();
         Time.timeScale = 1f;
         pauseScreen.SetActive(false);

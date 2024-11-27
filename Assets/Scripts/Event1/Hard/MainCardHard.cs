@@ -8,6 +8,8 @@ public class MainCardHard : MonoBehaviour
     [SerializeField] private GameObject retry;
     [SerializeField] private GameObject pauseScene;
     [SerializeField] private GameObject settingScene;
+    [SerializeField] private GameObject tutorialOverlay;
+
 
     SpriteRenderer spriteRenderer;
 
@@ -27,7 +29,7 @@ public class MainCardHard : MonoBehaviour
     public void OnMouseDown()
     {
         
-        if (retry.activeInHierarchy == false && pauseScene.activeInHierarchy == false && settingScene.activeInHierarchy == false)
+        if (retry.activeInHierarchy == false && pauseScene.activeInHierarchy == false && settingScene.activeInHierarchy == false && tutorialOverlay.activeInHierarchy == false)
         {
             soundPlayer.CardClickEffect();
             if (matched == false)

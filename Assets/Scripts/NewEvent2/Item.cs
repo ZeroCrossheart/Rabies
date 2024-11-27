@@ -23,6 +23,7 @@ public class Item : MonoBehaviour
     [SerializeField] private GameObject wrong;
     [SerializeField] private GameObject pause;
     [SerializeField] private GameObject setting;
+    [SerializeField] private GameObject tutorialOverlay;
 
     private GameObject canvas;
     private GameObject win;
@@ -38,6 +39,7 @@ public class Item : MonoBehaviour
         retry = canvas.transform.Find("Retry").gameObject;
         pause = canvas.transform.Find("PauseOverlay").gameObject;
         setting = canvas.transform.Find("SettingOverlay").gameObject;
+        tutorialOverlay = canvas.transform.Find("TutorialOverlay").gameObject;
         gameController = controller.GetComponent<NewE2GameController>();
         randomSpriteIndex = UnityEngine.Random.Range(0, itemSprites.Count());
         GetComponent<SpriteRenderer>().sprite = itemSprites[randomSpriteIndex];
@@ -57,7 +59,8 @@ public class Item : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (retry.activeInHierarchy == false && win.activeInHierarchy == false && right.activeInHierarchy == false && wrong.activeInHierarchy == false && pause.activeInHierarchy == false && setting.activeInHierarchy == false)
+        if (retry.activeInHierarchy == false && win.activeInHierarchy == false && right.activeInHierarchy == false && wrong.activeInHierarchy == false && pause.activeInHierarchy == false && setting.activeInHierarchy == false
+            && tutorialOverlay.activeInHierarchy == false)
         {
             ClickedSprite();
             ChangeHighlight();

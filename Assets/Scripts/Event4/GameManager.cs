@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text badCount;
 
     public GameObject gameOverPanel;
+    public GameObject nextStageButton;
+    public GameObject retryButton;
     public TMP_Text resultText;
 
     private void Awake()
@@ -49,11 +51,13 @@ public class GameManager : MonoBehaviour
 
         if (curedDogs.Count() > infectedDogs.Count())
         {
-            resultText.text = "You Win!\n Cured Dogs: " + curedDogs.Count() + "\n Infected Dogs: " + infectedDogs.Count();
+            resultText.text = "คุณชนะ!\n ถูกฉีดวัคซีน: " + curedDogs.Count() + "\n ติดเชื้อ: " + infectedDogs.Count();
+            nextStageButton.SetActive(true);
         }
         else
         {
-            resultText.text = "You Lose!\n Cured Dogs: " + curedDogs.Count() + "\n Infected Dogs: " + infectedDogs.Count();
+            resultText.text = "คุณแพ้!\n ถูกฉีดวัคซีน: " + curedDogs.Count() + "\n ติดเชื้อ: " + infectedDogs.Count();
+            retryButton.SetActive(true);
         }
 
         Time.timeScale = 0;
