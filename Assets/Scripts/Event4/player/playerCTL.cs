@@ -7,8 +7,12 @@ public class playerCTL : MonoBehaviour
 {
     [SerializeField] private E4SFX sound;
 
+    [SerializeField] private Animator animator;
+
     [SerializeField] private MovementJoystick joystick;
     [SerializeField] private float speed = 3f;
+
+    [SerializeField] private bool isMoving = false;
     private Rigidbody2D rb;
 
     [SerializeField] private Sprite curedSprite;
@@ -16,6 +20,7 @@ public class playerCTL : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     
@@ -24,10 +29,19 @@ public class playerCTL : MonoBehaviour
         if (joystick.joystickVec.y != 0)
         {
             rb.velocity = new Vector2(joystick.joystickVec.x * speed, joystick.joystickVec.y * speed);
+
+            if (joystick.joystickVec != Vector2.zero)
+            {
+                isMoving = true;
+                animator.SetBool("isWalking", isMoving);
+                animator.SetFloat("XInput", joystick.joystickVec.x);
+                animator.SetFloat("YInput", joystick.joystickVec.y);
+            }       
         }
         else
         {
             rb.velocity = Vector2.zero;
+            animator.SetBool("isWalking", false);
         }
     }
 
