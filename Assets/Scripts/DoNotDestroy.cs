@@ -9,6 +9,7 @@ public class DoNotDestroy : MonoBehaviour
 
     private void Awake()
     {
+
         go = GameObject.FindGameObjectsWithTag("Music");
 
         if (go.Count() > 1)

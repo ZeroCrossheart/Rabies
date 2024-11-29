@@ -1308,6 +1308,14 @@ PrefabInstance:
       propertyPath: source
       value: 
       objectReference: {fileID: 82611342}
+    - target: {fileID: 3961655449992860049, guid: 1bdbee2d830e56940b2d1a0c86326d6c, type: 3}
+      propertyPath: pauseOverlay
+      value: 
+      objectReference: {fileID: 1057738642}
+    - target: {fileID: 3961655449992860049, guid: 1bdbee2d830e56940b2d1a0c86326d6c, type: 3}
+      propertyPath: settingOverlay
+      value: 
+      objectReference: {fileID: 756169073}
     - target: {fileID: 4393187990771794209, guid: 1bdbee2d830e56940b2d1a0c86326d6c, type: 3}
       propertyPath: m_IsActive
       value: 0

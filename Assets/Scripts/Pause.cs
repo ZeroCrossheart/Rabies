@@ -15,9 +15,19 @@ public class Pause : MonoBehaviour
 
     public void PauseScene()
     {
-        /*source.clip = clip;
-        source.Play();*/
         if (/*win.activeInHierarchy == false && */retry.activeInHierarchy == false && pauseScreen.activeInHierarchy == false && settingScreen.activeInHierarchy == false && tutorialOverlay.activeInHierarchy == false)
+        {
+            source.clip = clip;
+            source.Play();
+            Time.timeScale = 0f;
+            pauseScreen.SetActive(true);
+        };
+    }
+
+    public void PauseSceneDuringTutorial()
+    {
+        Debug.Log("Clicked");
+        if (pauseScreen.activeInHierarchy == false && settingScreen.activeInHierarchy == false)
         {
             source.clip = clip;
             source.Play();

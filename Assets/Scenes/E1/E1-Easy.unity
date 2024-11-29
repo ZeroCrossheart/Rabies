@@ -808,7 +808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.45, y: -132}
+  m_AnchoredPosition: {x: 0.45, y: -198}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &308277551
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E02\u0E32\u0E22\u0E01\u0E44\u0E21\u0E48\u0E02\u0E36\u0E49\u0E19"
+  m_text: "\u2022 \u0E02\u0E32\u0E22\u0E01\u0E44\u0E21\u0E48\u0E02\u0E36\u0E49\u0E19"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5edeff42cc96acf4b8e31aa6c441e47f, type: 2}
   m_sharedMaterial: {fileID: -8355627826208852852, guid: 5edeff42cc96acf4b8e31aa6c441e47f, type: 2}
@@ -1953,7 +1953,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.45, y: -44}
+  m_AnchoredPosition: {x: 0.45, y: -66}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1073389805
@@ -1976,7 +1976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E01\u0E23\u0E30\u0E27\u0E19\u0E01\u0E23\u0E30\u0E27\u0E32\u0E22"
+  m_text: "\u2022 \u0E01\u0E23\u0E30\u0E27\u0E19\u0E01\u0E23\u0E30\u0E27\u0E32\u0E22"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5edeff42cc96acf4b8e31aa6c441e47f, type: 2}
   m_sharedMaterial: {fileID: -8355627826208852852, guid: 5edeff42cc96acf4b8e31aa6c441e47f, type: 2}
@@ -2490,8 +2490,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4279238911
+  m_fontColor: {r: 1, g: 0, b: 0.06464243, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2938,9 +2938,13 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 1840199288300442356, guid: 77c3c6f24b3ced643b75047e0e74db53, type: 3}
+    - target: {fileID: 1507376883122235362, guid: 77c3c6f24b3ced643b75047e0e74db53, type: 3}
       propertyPath: m_TagString
       value: BGMSlider
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840199288300442356, guid: 77c3c6f24b3ced643b75047e0e74db53, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2826214864621148282, guid: 77c3c6f24b3ced643b75047e0e74db53, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3448,7 +3452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.45, y: -88}
+  m_AnchoredPosition: {x: 0.45, y: -132}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047644246
@@ -3471,7 +3475,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E40\u0E2A\u0E35\u0E22\u0E07\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19"
+  m_text: "\u2022 \u0E40\u0E2A\u0E35\u0E22\u0E07\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5edeff42cc96acf4b8e31aa6c441e47f, type: 2}
   m_sharedMaterial: {fileID: -8355627826208852852, guid: 5edeff42cc96acf4b8e31aa6c441e47f, type: 2}
@@ -4377,6 +4381,14 @@ PrefabInstance:
       propertyPath: source
       value: 
       objectReference: {fileID: 1233586672566616371}
+    - target: {fileID: 3961655449992860049, guid: 1bdbee2d830e56940b2d1a0c86326d6c, type: 3}
+      propertyPath: pauseOverlay
+      value: 
+      objectReference: {fileID: 1994841908}
+    - target: {fileID: 3961655449992860049, guid: 1bdbee2d830e56940b2d1a0c86326d6c, type: 3}
+      propertyPath: settingOverlay
+      value: 
+      objectReference: {fileID: 1940338909}
     - target: {fileID: 4393187990771794209, guid: 1bdbee2d830e56940b2d1a0c86326d6c, type: 3}
       propertyPath: m_IsActive
       value: 0

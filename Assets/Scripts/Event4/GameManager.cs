@@ -51,12 +51,12 @@ public class GameManager : MonoBehaviour
 
         if (curedDogs.Count() > infectedDogs.Count())
         {
-            resultText.text = "คุณชนะ!\n ถูกฉีดวัคซีน: " + curedDogs.Count() + "\n ติดเชื้อ: " + infectedDogs.Count();
+            resultText.text = "คุณชนะ!\n สุนัขที่ได้รับวัคซีน: " + curedDogs.Count() + "\n สุนัขที่ติดเชื้อ: " + infectedDogs.Count();
             nextStageButton.SetActive(true);
         }
         else
         {
-            resultText.text = "คุณแพ้!\n ถูกฉีดวัคซีน: " + curedDogs.Count() + "\n ติดเชื้อ: " + infectedDogs.Count();
+            resultText.text = "คุณแพ้!\n สุนัขที่ได้รับวัคซีน: " + curedDogs.Count() + "\n สุนัขที่ติดเชื้อ: " + infectedDogs.Count();
             retryButton.SetActive(true);
         }
 

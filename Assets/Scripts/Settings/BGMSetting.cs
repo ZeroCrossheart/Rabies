@@ -10,7 +10,6 @@ public class BGMSetting : MonoBehaviour
 
     private void Awake()
     {
-        /*BGMSlider = GameObject.FindWithTag("BGMSLider").GetComponent<Slider>();*/
         if (PlayerPrefs.HasKey("BGMVolume"))
             LoadBGMVolume();
         else

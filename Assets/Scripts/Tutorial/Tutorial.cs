@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
+    [SerializeField] private GameObject pauseOverlay;
+    [SerializeField] private GameObject settingOverlay;
+
     [SerializeField] private GameObject tutorialOverlay;
 
     [SerializeField] private GameObject currentOverlay;
@@ -64,6 +67,13 @@ public class Tutorial : MonoBehaviour
         currentOverlay.SetActive(false);
         prevOverlay.SetActive(false);
         tutorialOverlay.SetActive(false);
-        Time.timeScale = 1.0f;
+        if (pauseOverlay.activeInHierarchy == true || settingOverlay.activeInHierarchy == true)
+        {
+            return;
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 }

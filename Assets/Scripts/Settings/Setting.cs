@@ -10,6 +10,11 @@ public class Setting : MonoBehaviour
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip clip;
 
+    /*private void Start()
+    {
+        this.gameObject.SetActive(false);
+    }*/
+
     public void BackToMenu()
     {
         source.clip = clip;
